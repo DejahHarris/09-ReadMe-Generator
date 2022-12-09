@@ -95,11 +95,11 @@ ${input.email}`
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-        .then((answers) => {
-            writeToFile(answers)
+    .then(function (userInput) {
+        console.log(userInput)
+        writeToFile("README.md" , generateMarkdown(userInput));
+    });
+};
 
-        })
-
-}
 // Function call to initialize app
 init();
