@@ -10,5 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^6.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DejahHarris/09-ReadMe-Generator.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DejahHarris/09-ReadMe-Generator/issues"
+  },
+  "homepage": "https://github.com/DejahHarris/09-ReadMe-Generator#readme"
 }

@@ -63,35 +63,16 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(input) {
-    var readMeText = `# ${input.title}
-##Table of Contents 
-[Description](#description)
-[Installation](#installation)
-[Usage](#usage)
-[License](#license)
-[Contributing](#contributing)
-[Testing](#testing)
-[Questions](#questions)
-## Description 
-${input.description}
-## Installation 
-${input.installation}
-## Usage
-${input.usage}
-## License
-${input.license}
-## Contributing
-${input.contributions}
-## Testing
-${input.test}
-## Questions 
-(${input.github})
-${input.email}`
-
-    console.log(readMeText)
-
-}
+inquirer.prompt(questions).then(function(response) {
+    console.log(response);
+    
+     var content = fileGenerator(response);
+     console.log(content);
+      fs.writeFile("./ReadMe.md", content, function(err){
+          if (err) throw err
+          console.log("success");
+      });
+ } ); 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
