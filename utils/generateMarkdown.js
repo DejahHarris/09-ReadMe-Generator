@@ -1,35 +1,32 @@
-function generateMarkdown(data, githubInfo) {
+function generateMarkdown(data) {
   return `
-# **${data.title}**
-${data.badge}
-## Description 
+# Project Title
+${data.title}
+${data.getLicense}
+# Description
 ${data.description}
-## Table of contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Licence](#Licence)
-- [Contributors](#Contributors)
-- [Test](#Test)
-- [Repository Link](#Repository)
-- [GitHub Info](#GitHub) 
-## Installation
-        ${data.installation}
-## Usage
+# Table of Contents 
+* [Installation](#-Installation)
+* [Usage](#-Usage)
+* [License](#-Installation)
+* [Contributing](#-Contributing)
+* [Tests](#-Tests)
+* [Questions](#-Contact-Information)
+  
+# Installation
+${data.installation}
+# Usage
 ${data.usage}
-## Licence
-${data.licence}
-## Contributors
+# License 
+${data.license}
+* As this license list was not comprehensive, if you need another license, use the contact information below to ask for license to be added. 
+# Contributing 
 ${data.contributing}
-## Test
-${data.test}
-## Repository
-- [Project Repo](${data.repo})
-## GitHub
-![Image of me](${githubInfo.githubImage})
-- ${githubInfo.name}
-- [GitHub Profile](${githubInfo.profile})
-- <${githubInfo.email}>
+# Tests
+${data.tests}
+# Contact Information 
+* GitHub Username: ${data.userName}
+* Contact Email: ${data.userEmail}
 `;
 }
 
